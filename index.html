@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Benchmarking y Servicios</title>
+</head>
+<body>
+    <header>
+        <h1>Benchmarking y Servicios</h1>
+        <nav>
+            <ul>
+                <li><a href="#competitivo">Benchmarking Competitivo</a></li>
+                <li><a href="#funcional">Benchmarking Funcional</a></li>
+                <li><a href="#interno">Benchmarking Interno</a></li>
+                <li><a href="#diseno-ux-ui">Servicios de UX/UI</a></li>
+                <li><a href="#diseno-grafico">Diseño Gráfico</a></li>
+                <li><a href="#marketing">Estrategias de Marketing</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#video">Video de Presentación</a></li>
+                <li><a href="#carrusel">Carrusel de Imágenes Isométricas</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="competitivo">
+            <h2>Benchmarking Competitivo</h2>
+            <p>Objetivo: Analizar y comparar productos, servicios o procesos de tus competidores directos.</p>
+            <p>Complejidad: Media. Precio: Moderado a alto.</p>
+        </section>
+
+        <section id="funcional">
+            <h2>Benchmarking Funcional</h2>
+            <p>Objetivo: Comparar un proceso específico con empresas líderes.</p>
+            <p>Complejidad: Alta. Precio: Alto.</p>
+        </section>
+
+        <section id="interno">
+            <h2>Benchmarking Interno</h2>
+            <p>Objetivo: Comparar procesos dentro de tu propia organización.</p>
+            <p>Complejidad: Baja a media. Precio: Bajo.</p>
+        </section>
+
+        <section id="diseno-ux-ui">
+            <h2>Servicios de UX/UI</h2>
+            <p>Enfoque en la experiencia de usuario (UX) y la interfaz de usuario (UI).</p>
+            <p>Mostramos estudios de caso, metodologías utilizadas y resultados obtenidos para otros clientes.</p>
+            <button class="mas-informacion" onclick="document.getElementById('modal-diseno-ux-ui').style.display='block'">Más Información</button>
+        </section>
+
+        <section id="diseno-grafico">
+            <h2>Diseño Gráfico</h2>
+            <p>Ofrecemos servicios de diseño visual, identidad corporativa, ilustraciones personalizadas y más.</p>
+            <p>Ejemplos visuales de trabajos previos estarán disponibles en nuestra galería.</p>
+            <button class="mas-informacion" onclick="document.getElementById('modal-diseno-grafico').style.display='block'">Más Información</button>
+        </section>
+
+        <section id="marketing">
+            <h2>Estrategias de Marketing</h2>
+            <p>Ofrecemos estrategias personalizadas que incluyen SEO, publicidad digital y campañas en redes sociales.</p>
+            <button class="mas-informacion" onclick="document.getElementById('modal-marketing').style.display='block'">Más Información</button>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería de Proyectos</h2>
+            <div class="galeria-mosaico">
+                <div class="galeria-item">
+                    <img src="images/proyecto1.png" alt="Proyecto 1">
+                    <button onclick="document.getElementById('modal-proyecto1').style.display='block'">Más Información</button>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/proyecto2.png" alt="Proyecto 2">
+                    <button onclick="document.getElementById('modal-proyecto2').style.display='block'">Más Información</button>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/proyecto3.png" alt="Proyecto 3">
+                    <button onclick="document.getElementById('modal-proyecto3').style.display='block'">Más Información</button>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/proyecto4.png" alt="Proyecto 4">
+                    <button onclick="document.getElementById('modal-proyecto4').style.display='block'">Más Información</button>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/proyecto5.png" alt="Proyecto 5">
+                    <button onclick="document.getElementById('modal-proyecto5').style.display='block'">Más Información</button>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/proyecto6.png" alt="Proyecto 6">
+                    <button onclick="document.getElementById('modal-proyecto6').style.display='block'">Más Información</button>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/proyecto7.png" alt="Proyecto 7">
+                    <button onclick="document.getElementById('modal-proyecto7').style.display='block'">Más Información</button>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/proyecto8.png" alt="Proyecto 8">
+                    <button onclick="document.getElementById('modal-proyecto8').style.display='block'">Más Información</button>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/proyecto9.png" alt="Proyecto 9">
+                    <button onclick="document.getElementById('modal-proyecto9').style.display='block'">Más Información</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="video">
+            <h2>Video de Presentación</h2>
+            <video controls>
+                <source src="video/presentacion.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+        </section>
+
+        <section id="carrusel">
+            <h2>Carrusel de Imágenes Isométricas</h2>
+            <div class="carrusel-container">
+                <div class="carrusel-slide">
+                    <img src="images/pizza_isometric.png" alt="Pizza Isométrica">
+                </div>
+                <div class="carrusel-slide">
+                    <img src="images/kitchen_isometric.png" alt="Cocina Isométrica">
+                </div>
+                <div class="carrusel-slide">
+                    <img src="images/glitch_art.png" alt="Arte Glitch">
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </section>
+
+        <section id="contacto">
+            <h2>¡Contáctanos!</h2>
+            <button id="open-contact-modal" class="call-to-action" onclick="document.getElementById('contact-modal').style.display='block'">¡Escríbenos!</button>
+        </section>
+    </main>
+
+    <div id="modal-diseno-grafico" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-diseno-grafico').style.display='none'">&times;</span>
+            <h2>Más sobre Diseño Gráfico</h2>
+            <p>Aquí puedes incluir información adicional sobre los servicios de diseño gráfico.</p>
+            <img src="images/diseno_grafico.png" alt="Diseño Gráfico" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-diseno-ux-ui" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-diseno-ux-ui').style.display='none'">&times;</span>
+            <h2>Más sobre UX/UI</h2>
+            <p>Aquí puedes incluir información adicional sobre los servicios de UX/UI.</p>
+            <img src="images/ux_ui.png" alt="UX/UI" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-marketing" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-marketing').style.display='none'">&times;</span>
+            <h2>Más sobre Marketing</h2>
+            <p>Aquí puedes incluir información adicional sobre las estrategias de marketing.</p>
+            <img src="images/marketing.png" alt="Marketing" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-proyecto1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-proyecto1').style.display='none'">&times;</span>
+            <h2>Más sobre Proyecto 1</h2>
+            <p>Descripción del proyecto 1.</p>
+            <img src="images/proyecto1.png" alt="Proyecto 1" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-proyecto2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-proyecto2').style.display='none'">&times;</span>
+            <h2>Más sobre Proyecto 2</h2>
+            <p>Descripción del proyecto 2.</p>
+            <img src="images/proyecto2.png" alt="Proyecto 2" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-proyecto3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-proyecto3').style.display='none'">&times;</span>
+            <h2>Más sobre Proyecto 3</h2>
+            <p>Descripción del proyecto 3.</p>
+            <img src="images/proyecto3.png" alt="Proyecto 3" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-proyecto4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-proyecto4').style.display='none'">&times;</span>
+            <h2>Más sobre Proyecto 4</h2>
+            <p>Descripción del proyecto 4.</p>
+            <img src="images/proyecto4.png" alt="Proyecto 4" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-proyecto5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-proyecto5').style.display='none'">&times;</span>
+            <h2>Más sobre Proyecto 5</h2>
+            <p>Descripción del proyecto 5.</p>
+            <img src="images/proyecto5.png" alt="Proyecto 5" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-proyecto6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-proyecto6').style.display='none'">&times;</span>
+            <h2>Más sobre Proyecto 6</h2>
+            <p>Descripción del proyecto 6.</p>
+            <img src="images/proyecto6.png" alt="Proyecto 6" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-proyecto7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-proyecto7').style.display='none'">&times;</span>
+            <h2>Más sobre Proyecto 7</h2>
+            <p>Descripción del proyecto 7.</p>
+            <img src="images/proyecto7.png" alt="Proyecto 7" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-proyecto8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-proyecto8').style.display='none'">&times;</span>
+            <h2>Más sobre Proyecto 8</h2>
+            <p>Descripción del proyecto 8.</p>
+            <img src="images/proyecto8.png" alt="Proyecto 8" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="modal-proyecto9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-proyecto9').style.display='none'">&times;</span>
+            <h2>Más sobre Proyecto 9</h2>
+            <p>Descripción del proyecto 9.</p>
+            <img src="images/proyecto9.png" alt="Proyecto 9" style="width:100%; border-radius:10px;">
+        </div>
+    </div>
+
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('contact-modal').style.display='none'">&times;</span>
+            <h2>Formulario de Contacto</h2>
+            <form action="mailto:tu-email@ejemplo.com" method="POST" enctype="text/plain">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Empresa Emergente</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
