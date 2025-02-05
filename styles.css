@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f0f8ff; /* Modo claro */
     color: #333; /* Texto oscuro */
+    text-align: center; /* Centrar todo el texto en la página */
 }
 
 header {
@@ -20,10 +21,12 @@ nav ul {
     display: flex;
     justify-content: center;
     background: #000;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 10px; /* Ajustar el margen para evitar que los elementos se desborden */
+    flex: 1 1 auto; /* Permite que los elementos se expandan y se contraigan */
 }
 
 nav ul li a {
@@ -129,6 +132,20 @@ h2, p {
     width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
     border-radius: 10px; /* Bordes redondeados para las imágenes */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
+}
+
+.galeria-item button {
+    border-radius: 10px; /* Bordes redondeados para los botones */
+    background-color: #ffcc00; /* Color de fondo del botón */
+    color: #333; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar cursor al pasar */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.galeria-item button:hover {
+    background-color: #ffb300; /* Color más oscuro al pasar el mouse */
 }
 
 video {
