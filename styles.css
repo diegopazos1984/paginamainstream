@@ -284,6 +284,20 @@ footer {
     justify-content: center;
 }
 
+.integrante button {
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #ffcc00; /* Color amarillo brillante */
+    color: #333; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar cursor al pasar */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.integrante button:hover {
+    background-color: #ffb300; /* Color más oscuro al pasar el mouse */
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
