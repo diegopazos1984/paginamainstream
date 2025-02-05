@@ -206,6 +206,21 @@ footer {
     width: 100%;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
 .modal {
     display: none;
     position: fixed;
