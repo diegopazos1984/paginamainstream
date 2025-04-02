@@ -92,14 +92,38 @@ form button:hover {
     background-color: #ffcc00;
 }
 
+button {
+    background-color: #007BFF; /* Azul moderno */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+button:active {
+    background-color: #003f7f; /* Azul aún más oscuro */
+    transform: scale(0.95); /* Efecto de clic */
+}
+
 button.mas-informacion {
+    margin-top: 10px;
+    display: inline-block;
     border-radius: 10px;
     background-color: #ffb3ba; /* Color pastel */
     color: #333; /* Texto oscuro */
 }
 
 .call-to-action {
-    background-color: #ffcc00; /* Color amarillo brillante */
+    background-color: #28a745; /* Verde moderno */
+    font-weight: bold;
     color: #333; /* Texto oscuro */
     padding: 15px 25px;
     border: none;
@@ -110,7 +134,7 @@ button.mas-informacion {
 }
 
 .call-to-action:hover {
-    background-color: #ffb300; /* Color más oscuro al pasar el mouse */
+    background-color: #218838; /* Verde más oscuro */
 }
 
 h2, p {
@@ -213,12 +237,18 @@ footer {
 }
 
 .social-icons a {
-    margin: 0 10px;
+    margin: 0 15px; /* Espaciado horizontal entre los botones */
+    display: inline-block;
 }
 
 .social-icons img {
-    width: 30px; /* Ajusta el tamaño según sea necesario */
+    width: 30px; /* Tamaño de los iconos */
     height: auto;
+    transition: transform 0.3s ease; /* Efecto de zoom al pasar el mouse */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Aumentar tamaño al pasar el mouse */
 }
 
 .modal {
@@ -298,8 +328,55 @@ footer {
     background-color: #ffb300; /* Color más oscuro al pasar el mouse */
 }
 
+.carousel-container.logos {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-slide {
+    display: flex;
+    gap: 20px;
+    animation: scrollLogos 10s linear infinite;
+}
+
+.carousel-slide i {
+    font-size: 2rem;
+    color: #ffcc00;
+    transition: transform 0.3s;
+}
+
+.carousel-slide i:hover {
+    transform: scale(1.2);
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
     }
+}
+
+.integrantes {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en una fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+.integrante {
+    flex: 1 1 200px; /* Los elementos ocuparán al menos 200px y se expandirán si hay espacio */
+    max-width: 300px; /* Limita el ancho máximo de cada integrante */
+    text-align: center; /* Centra el contenido dentro de cada tarjeta */
 }
