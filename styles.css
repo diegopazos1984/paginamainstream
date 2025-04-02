@@ -8,11 +8,27 @@ body {
 }
 
 header {
+    position: relative; /* Permite posicionar el logo dentro del header */
     background: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
     border-bottom: 5px solid #ffcc00;
+}
+
+.logo-header {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical */
+    right: 20px; /* Ajusta la posición horizontal */
+    width: 100px; /* Tamaño más grande del logo */
+    height: auto;
+    border-radius: 5px; /* Opcional: bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para el logo */
+    transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.logo-header:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
 }
 
 nav ul {
@@ -241,7 +257,7 @@ footer {
     display: inline-block;
 }
 
-.social-icons img {
+social-icons img {
     width: 30px; /* Tamaño de los iconos */
     height: auto;
     transition: transform 0.3s ease; /* Efecto de zoom al pasar el mouse */
