@@ -29,6 +29,14 @@ document.querySelector('.prev').addEventListener('click', prevSlide);
 // Inicializar el carrusel mostrando la primera imagen
 showSlide(currentIndex);
 
+// Carrusel de herramientas en bucle
+const logosSlide = document.querySelector(".carousel-slide");
+const logosContainer = document.querySelector(".carousel-container.logos");
+
+// Clonar los elementos para el efecto de bucle
+const logosClone = logosSlide.cloneNode(true);
+logosSlide.parentElement.appendChild(logosClone);
+
 // Funcionalidad de modales
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {

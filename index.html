@@ -109,7 +109,7 @@
 
         <section id="video">
             <h2>Video de Presentación</h2>
-            <video controls>
+            <video controls style="width: 100%; height: auto;">
                 <source src="video/presentacion.mp4" type="video/mp4">
                 Tu navegador no soporta el video.
             </video>
@@ -119,17 +119,65 @@
             <h2>Carrusel de Imágenes Isométricas</h2>
             <div class="carrusel-container">
                 <div class="carrusel-slide">
-                    <img src="images/pizza_isometric.png" alt="Pizza Isométrica">
+                    <img src="assets/carrusel/1.jpg" alt="Pizza Isométrica">
                 </div>
                 <div class="carrusel-slide">
-                    <img src="images/kitchen_isometric.png" alt="Cocina Isométrica">
+                    <img src="assets/carrusel/5.jpg" alt="Cocina Isométrica">
                 </div>
                 <div class="carrusel-slide">
-                    <img src="images/glitch_art.png" alt="Arte Glitch">
+                    <img src="assets/carrusel/3.jpg" alt="Arte Glitch">
                 </div>
             </div>
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
+        </section>
+
+        <section id="carrusel-logos">
+            <h2>Herramientas que utilizamos</h2>
+            <div class="carousel-container logos">
+                <div class="carousel-slide">
+                    <i class="fab fa-adobe" title="Adobe Creative Suite"></i>
+                    <i class="fab fa-html5" title="HTML5"></i>
+                    <i class="fab fa-css3-alt" title="CSS3"></i>
+                    <i class="fab fa-js" title="JavaScript"></i>
+                    <i class="fab fa-python" title="Python"></i>
+                    <i class="fab fa-figma" title="Figma"></i>
+                    <i class="fab fa-github" title="GitHub"></i>
+                    <i class="fab fa-trello" title="Trello"></i>
+                    <i class="fab fa-discord" title="Discord"></i>
+                    <i class="fab fa-slack" title="Slack"></i>
+                    <i class="fab fa-google" title="Google"></i>
+                    <i class="fab fa-aws" title="AWS"></i>
+                    <i class="fab fa-microsoft" title="Microsoft"></i>
+                    <i class="fab fa-node-js" title="Node.js"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="planes-ux-ui">
+            <h2>Planes de UX/UI</h2>
+            <div class="planes-container" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div class="plan" style="text-align: center; margin: 10px;">
+                    <h3>Plan Básico</h3>
+                    <p>Ideal para pequeñas empresas.</p>
+                    <button onclick="document.getElementById('modal-plan-basico').style.display='block'">Ver Detalles</button>
+                </div>
+                <div class="plan" style="text-align: center; margin: 10px;">
+                    <h3>Plan Intermedio</h3>
+                    <p>Perfecto para empresas en crecimiento.</p>
+                    <button onclick="document.getElementById('modal-plan-intermedio').style.display='block'">Ver Detalles</button>
+                </div>
+                <div class="plan" style="text-align: center; margin: 10px;">
+                    <h3>Plan Avanzado</h3>
+                    <p>Para empresas consolidadas.</p>
+                    <button onclick="document.getElementById('modal-plan-avanzado').style.display='block'">Ver Detalles</button>
+                </div>
+                <div class="plan" style="text-align: center; margin: 10px;">
+                    <h3>Plan Personalizado</h3>
+                    <p>Adaptado a tus necesidades específicas.</p>
+                    <button onclick="document.getElementById('modal-plan-personalizado').style.display='block'">Ver Detalles</button>
+                </div>
+            </div>
         </section>
 
         <section id="contacto">
@@ -296,6 +344,38 @@
         </div>
     </div>
 
+    <div id="modal-plan-basico" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-plan-basico').style.display='none'">&times;</span>
+            <h2>Plan Básico</h2>
+            <p>Incluye análisis básico de UX, diseño de interfaz simple y pruebas de usabilidad iniciales.</p>
+        </div>
+    </div>
+
+    <div id="modal-plan-intermedio" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-plan-intermedio').style.display='none'">&times;</span>
+            <h2>Plan Intermedio</h2>
+            <p>Incluye análisis detallado de UX, diseño de interfaz avanzada y pruebas de usabilidad completas.</p>
+        </div>
+    </div>
+
+    <div id="modal-plan-avanzado" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-plan-avanzado').style.display='none'">&times;</span>
+            <h2>Plan Avanzado</h2>
+            <p>Incluye análisis exhaustivo de UX, diseño de interfaz premium, pruebas de usabilidad avanzadas y soporte continuo.</p>
+        </div>
+    </div>
+
+    <div id="modal-plan-personalizado" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-plan-personalizado').style.display='none'">&times;</span>
+            <h2>Plan Personalizado</h2>
+            <p>Incluye un análisis y diseño completamente adaptado a las necesidades específicas de tu empresa.</p>
+        </div>
+    </div>
+
     <div id="contact-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('contact-modal').style.display='none'">&times;</span>
@@ -315,9 +395,15 @@
     <footer>
         <p>&copy; 2025 Empresa Emergente</p>
         <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30" style="filter: brightness(0) invert(1);"></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" style="filter: brightness(0) invert(1);"></a>
-            <a href="https://www.linkedin.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" width="30" style="filter: brightness(0) invert(1);"></a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="30">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" width="30">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" width="30">
+            </a>
         </div>
     </footer>
     <script src="script.js"></script>
