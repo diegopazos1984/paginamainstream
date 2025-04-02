@@ -20,7 +20,7 @@ header {
     position: absolute;
     top: 10px; /* Ajusta la posición vertical */
     right: 20px; /* Ajusta la posición horizontal */
-    width: 100px; /* Tamaño más grande del logo */
+    width: 70px; /* Tamaño más razonable del logo */
     height: auto;
     border-radius: 5px; /* Opcional: bordes redondeados */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para el logo */
