@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
-    font-family: 'Arial Black', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* Modo claro */
-    color: #333; /* Texto oscuro */
+    background-color: #f8f9fa;
+    color: #2c3e50;
     text-align: center; /* Centrar todo el texto en la página */
 }
 
 header {
     position: relative; /* Permite posicionar el logo dentro del header */
-    background: #333;
+    background: #2c3e50;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -46,19 +48,20 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffcc00;
+    color: #ff4444;
     text-decoration: none;
     font-size: 1.2em;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00ffcc;
+    color: #ff0000;
 }
 
 main {
     padding: 20px;
-    background: linear-gradient(135deg, #ff4c4c, #ffcc00);
+    background: #ffffff;
 }
 
 section {
@@ -91,37 +94,40 @@ form label {
 form input, form textarea {
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #ffcc00;
+    border: 2px solid #ff4444;
     border-radius: 4px;
 }
 
 form button {
     padding: 10px;
-    background-color: #00ffcc;
-    color: #000;
+    background-color: #ff4444;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #ffcc00;
+    background-color: #ff0000;
 }
 
 button {
-    background-color: #007BFF; /* Azul moderno */
-    color: #fff; /* Texto blanco */
+    background-color: #ff4444;
+    color: #fff;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #0056b3; /* Azul más oscuro */
-    transform: scale(1.05); /* Efecto de zoom */
+    background-color: #ff0000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
 }
 
 button:active {
@@ -138,9 +144,9 @@ button.mas-informacion {
 }
 
 .call-to-action {
-    background-color: #28a745; /* Verde moderno */
+    background-color: #ff4444;
     font-weight: bold;
-    color: #333; /* Texto oscuro */
+    color: #fff;
     padding: 15px 25px;
     border: none;
     border-radius: 5px;
@@ -150,11 +156,11 @@ button.mas-informacion {
 }
 
 .call-to-action:hover {
-    background-color: #218838; /* Verde más oscuro */
+    background-color: #ff0000;
 }
 
 h2, p {
-    color: #39ff14; /* Verde flúor */
+    color: #2c3e50;
 }
 
 .galeria-mosaico {
@@ -291,12 +297,13 @@ social-icons img {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #ffffff;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .close {
@@ -332,7 +339,7 @@ social-icons img {
 
 .integrante button {
     border-radius: 10px; /* Bordes redondeados */
-    background-color: #ffcc00; /* Color amarillo brillante */
+    background-color: #ff4444; /* Color amarillo brillante */
     color: #333; /* Color del texto */
     padding: 10px 15px; /* Espaciado interno */
     border: none; /* Sin borde */
@@ -341,7 +348,7 @@ social-icons img {
 }
 
 .integrante button:hover {
-    background-color: #ffb300; /* Color más oscuro al pasar el mouse */
+    background-color: #ff0000; /* Color más oscuro al pasar el mouse */
 }
 
 .carousel-container.logos {
@@ -361,7 +368,7 @@ social-icons img {
 
 .carousel-slide i {
     font-size: 2rem;
-    color: #ffcc00;
+    color: #2c3e50;
     transition: transform 0.3s;
 }
 
@@ -395,4 +402,30 @@ social-icons img {
     flex: 1 1 200px; /* Los elementos ocuparán al menos 200px y se expandirán si hay espacio */
     max-width: 300px; /* Limita el ancho máximo de cada integrante */
     text-align: center; /* Centra el contenido dentro de cada tarjeta */
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la parte derecha */
+    width: 60px; /* Tamaño del botón */
+    height: 60px;
+    border-radius: 50%; /* Hacer el botón circular */
+    background-color: #25d366; /* Color de fondo de WhatsApp */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button img {
+    width: 35px; /* Tamaño del icono */
+    height: auto;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
 }
