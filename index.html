@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Diseño Gráfico, Diseño UX/UI</title>
@@ -160,24 +160,28 @@
             <div class="planes-container" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
                 <div class="plan" style="text-align: center; margin: 10px;">
                     <h3>Plan Básico</h3>
-                    <p>Ideal para pequeñas empresas.</p>
+                    <p>Comienza tu camino digital con soluciones accesibles y esenciales. Perfecto para quienes están dando su primer paso.</p>
                     <button onclick="document.getElementById('modal-plan-basico').style.display='block'">Ver Detalles</button>
-                </div>
-                <div class="plan" style="text-align: center; margin: 10px;">
-                    <h3>Plan Intermedio</h3>
-                    <p>Perfecto para empresas en crecimiento.</p>
-                    <button onclick="document.getElementById('modal-plan-intermedio').style.display='block'">Ver Detalles</button>
+                    <button class="add-to-cart" onclick="addToCart('Plan Básico', 100)">Agregar al Carrito</button>
                 </div>
                 <div class="plan" style="text-align: center; margin: 10px;">
                     <h3>Plan Avanzado</h3>
-                    <p>Para empresas consolidadas.</p>
+                    <p>Eleva tu presencia digital con estrategias de UX/UI personalizadas y optimización continua. Ideal para marcas en crecimiento.</p>
                     <button onclick="document.getElementById('modal-plan-avanzado').style.display='block'">Ver Detalles</button>
+                    <button class="add-to-cart" onclick="addToCart('Plan Avanzado', 200)">Agregar al Carrito</button>
                 </div>
                 <div class="plan" style="text-align: center; margin: 10px;">
-                    <h3>Plan Personalizado</h3>
-                    <p>Adaptado a tus necesidades específicas.</p>
-                    <button onclick="document.getElementById('modal-plan-personalizado').style.display='block'">Ver Detalles</button>
+                    <h3>Plan Premium</h3>
+                    <p>Obtén soluciones completas para un crecimiento sostenido. Diseño avanzado y soporte continuo para maximizar el rendimiento de tu marca.</p>
+                    <button onclick="document.getElementById('modal-plan-premium').style.display='block'">Ver Detalles</button>
+                    <button class="add-to-cart" onclick="addToCart('Plan Premium', 300)">Agregar al Carrito</button>
                 </div>
+            </div>
+            <div id="cart" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px;">
+                <h3>Carrito de Compras</h3>
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="cart-total">0</span></p>
+                <button onclick="checkout()">Finalizar Compra</button>
             </div>
         </section>
 
@@ -222,20 +226,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="integrante">
-                    <h3>Ana Torres</h3>
-                    <button onclick="document.getElementById('modal-ana').style.display='block'">Más Información</button>
-                    <div id="modal-ana" class="modal">
-                        <div class="modal-content">
-                            <span class="close" onclick="document.getElementById('modal-ana').style.display='none'">&times;</span>
-                            <h2>Ana Torres</h2>
-                            <p>Ana es una experta en análisis de datos y visualización, con un enfoque en la toma de decisiones basadas en datos.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
+
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button" title="Contáctanos por WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
 
     <div id="modal-diseno-grafico" class="modal">
         <div class="modal-content">
@@ -349,7 +346,8 @@
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('modal-plan-basico').style.display='none'">&times;</span>
             <h2>Plan Básico</h2>
-            <p>Incluye análisis básico de UX, diseño de interfaz simple y pruebas de usabilidad iniciales.</p>
+            <p>Comienza tu camino digital con soluciones accesibles y esenciales. Perfecto para quienes están dando su primer paso.</p>
+            <img src="images/plan_basico.png" alt="Plan Básico" style="width:100%; border-radius:10px;">
         </div>
     </div>
 
@@ -366,6 +364,7 @@
             <span class="close" onclick="document.getElementById('modal-plan-avanzado').style.display='none'">&times;</span>
             <h2>Plan Avanzado</h2>
             <p>Incluye análisis exhaustivo de UX, diseño de interfaz premium, pruebas de usabilidad avanzadas y soporte continuo.</p>
+            <img src="images/plan_avanzado.png" alt="Plan Avanzado" style="width:100%; border-radius:10px;">
         </div>
     </div>
 
@@ -374,6 +373,15 @@
             <span class="close" onclick="document.getElementById('modal-plan-personalizado').style.display='none'">&times;</span>
             <h2>Plan Personalizado</h2>
             <p>Incluye un análisis y diseño completamente adaptado a las necesidades específicas de tu empresa.</p>
+        </div>
+    </div>
+
+    <div id="modal-plan-premium" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modal-plan-premium').style.display='none'">&times;</span>
+            <h2>Plan Premium</h2>
+            <p>Obtén soluciones completas para un crecimiento sostenido. Diseño avanzado y soporte continuo para maximizar el rendimiento de tu marca.</p>
+            <img src="images/plan_premium.png" alt="Plan Premium" style="width:100%; border-radius:10px;">
         </div>
     </div>
 
@@ -408,5 +416,34 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+        const cart = [];
+        function addToCart(plan, price) {
+            cart.push({ plan, price });
+            updateCart();
+        }
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.plan} - $${item.price}`;
+                cartItems.appendChild(li);
+                total += item.price;
+            });
+            cartTotal.textContent = total;
+        }
+        function checkout() {
+            if (cart.length === 0) {
+                alert('El carrito está vacío.');
+            } else {
+                alert('Gracias por tu compra.');
+                cart.length = 0;
+                updateCart();
+            }
+        }
+    </script>
 </body>
 </html>
