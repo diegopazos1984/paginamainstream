@@ -113,41 +113,59 @@
         <section id="galeria">
             <h2>Galería de Proyectos</h2>
             <div class="galeria-mosaico">
-                <div class="galeria-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Project1.jpg" alt="Proyecto 1">
+                <div class="galeria-item proyecto-especial">
+                    <img src="./assets/galeria/proyecto1.jpg" alt="Proyecto 1">
+                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
                     <button onclick="document.getElementById('modal-proyecto1').style.display='block'">Más Información</button>
                 </div>
-                <div class="galeria-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Project2.jpg" alt="Proyecto 2">
+                <div class="galeria-item proyecto-especial">
+                    <img src="./assets/galeria/proyecto2.jpg" alt="Proyecto 2">
+                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
                     <button onclick="document.getElementById('modal-proyecto2').style.display='block'">Más Información</button>
                 </div>
-                <div class="galeria-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Project3.jpg" alt="Proyecto 3">
-                    <button onclick="document.getElementById('modal-proyecto3').style.display='block'">Más Información</button>
+                <div class="galeria-item proyecto-especial">
+                    <img src="./assets/galeria/pagana.PNG" alt="Proyecto 3">
+                    <div class="proyecto-info">
+                        <h3>Pagana - Arte Digital</h3>
+                        <button onclick="window.open('https://katarsispazos.github.io/pagana/', '_blank')">Ver Proyecto</button>
+                        <button onclick="document.getElementById('modal-proyecto3').style.display='block'">Más Información</button>
+                    </div>
                 </div>
-                <div class="galeria-item">
-                    <img src="images/proyecto4.png" alt="Proyecto 4">
-                    <button onclick="document.getElementById('modal-proyecto4').style.display='block'">Más Información</button>
+                <div class="galeria-item proyecto-especial">
+                    <img src="./assets/galeria/corpus.PNG" alt="Proyecto 4">
+                    <div class="proyecto-info">
+                        <h3>Visualización de Datos</h3>
+                        <button onclick="window.open('https://diegopazos1984.github.io/parasubida-/', '_blank')">Ver Proyecto</button>
+                        <button onclick="document.getElementById('modal-proyecto4').style.display='block'">Más Información</button>
+                    </div>
                 </div>
-                <div class="galeria-item">
-                    <img src="images/proyecto5.png" alt="Proyecto 5">
+                <div class="galeria-item proyecto-especial">
+                    <img src="./assets/galeria/proyecto5.jpg" alt="Proyecto 5">
+                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
                     <button onclick="document.getElementById('modal-proyecto5').style.display='block'">Más Información</button>
                 </div>
-                <div class="galeria-item">
-                    <img src="images/proyecto6.png" alt="Proyecto 6">
+                <div class="galeria-item proyecto-especial">
+                    <img src="./assets/galeria/proyecto6.jpg" alt="Proyecto 6">
+                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
                     <button onclick="document.getElementById('modal-proyecto6').style.display='block'">Más Información</button>
                 </div>
-                <div class="galeria-item">
-                    <img src="images/proyecto7.png" alt="Proyecto 7">
+                <div class="galeria-item proyecto-especial">
+                    <img src="./assets/galeria/proyecto7.jpg" alt="Proyecto 7">
+                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
                     <button onclick="document.getElementById('modal-proyecto7').style.display='block'">Más Información</button>
                 </div>
-                <div class="galeria-item">
-                    <img src="images/proyecto8.png" alt="Proyecto 8">
+                <div class="galeria-item proyecto-especial">
+                    <img src="./assets/galeria/proyecto8.jpg" alt="Proyecto 8">
+                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
                     <button onclick="document.getElementById('modal-proyecto8').style.display='block'">Más Información</button>
                 </div>
-                <div class="galeria-item">
-                    <img src="images/proyecto9.png" alt="Proyecto 9">
-                    <button onclick="document.getElementById('modal-proyecto9').style.display='block'">Más Información</button>
+                <div class="galeria-item proyecto-especial">
+                    <img src="./assets/galeria/Captura.PNG" alt="Diagrama de Flujo">
+                    <div class="proyecto-info">
+                        <h3>Diagrama de Flujo Interactivo</h3>
+                        <button onclick="window.open('https://diegopazos1984.github.io/proyectoauto/', '_blank')">Ver Proyecto</button>
+                        <button onclick="document.getElementById('modal-diagrama').style.display='block'">Más Información</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -354,6 +372,89 @@
             </div>
         </div>
 
+        <div id="modal-diagrama" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal-diagrama').style.display='none'">&times;</span>
+                <h2>Proyecto: Diagrama de Flujo Interactivo</h2>
+                <img src="./assets/galeria/Captura.PNG" alt="Diagrama de Flujo" style="width:100%; border-radius:10px;">
+                <p>Visualización interactiva de procesos y flujos de trabajo. Implementado con tecnologías web modernas.</p>
+                <a href="https://diegopazos1984.github.io/proyectoauto/" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+            </div>
+        </div>
+
+        <div id="modal-proyecto1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal-proyecto1').style.display='none'">&times;</span>
+                <h2>Proyecto 1: [Nombre del Proyecto]</h2>
+                <img src="./assets/galeria/proyecto1.jpg" alt="Proyecto 1" style="width:100%; border-radius:10px;">
+                <p>Descripción detallada del proyecto 1</p>
+                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+            </div>
+        </div>
+        <div id="modal-proyecto2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal-proyecto2').style.display='none'">&times;</span>
+                <h2>Proyecto 2: [Nombre del Proyecto]</h2>
+                <img src="./assets/galeria/proyecto2.jpg" alt="Proyecto 2" style="width:100%; border-radius:10px;">
+                <p>Descripción detallada del proyecto 2</p>
+                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+            </div>
+        </div>
+        <div id="modal-proyecto3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal-proyecto3').style.display='none'">&times;</span>
+                <h2>Proyecto: Pagana - Arte Digital</h2>
+                <img src="./assets/galeria/pagana.PNG" alt="Pagana" style="width:100%; border-radius:10px;">
+                <p>Exposición digital de arte con enfoque en la fusión entre lo tradicional y lo contemporáneo. Una exploración visual que combina elementos paganos con técnicas modernas de diseño digital.</p>
+                <a href="https://katarsispazos.github.io/pagana/" target="_blank" class="proyecto-link">Visitar Galería</a>
+            </div>
+        </div>
+        <div id="modal-proyecto4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal-proyecto4').style.display='none'">&times;</span>
+                <h2>Corpus Tattoo: Visualización de Datos Interactiva</h2>
+                <img src="./assets/galeria/corpus.PNG" alt="Visualización de Datos" style="width:100%; border-radius:10px;">
+                <p>Proyecto de visualización de datos interactiva implementado con tecnologías web modernas. Permite una exploración intuitiva de la información mediante una interfaz dinámica y responsiva.</p>
+                <a href="https://diegopazos1984.github.io/parasubida-/" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+            </div>
+        </div>
+        <div id="modal-proyecto5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal-proyecto5').style.display='none'">&times;</span>
+                <h2>Proyecto 5: [Nombre del Proyecto]</h2>
+                <img src="./assets/galeria/proyecto5.jpg" alt="Proyecto 5" style="width:100%; border-radius:10px;">
+                <p>Descripción detallada del proyecto 5</p>
+                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+            </div>
+        </div>
+        <div id="modal-proyecto6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal-proyecto6').style.display='none'">&times;</span>
+                <h2>Proyecto 6: [Nombre del Proyecto]</h2>
+                <img src="./assets/galeria/proyecto6.jpg" alt="Proyecto 6" style="width:100%; border-radius:10px;">
+                <p>Descripción detallada del proyecto 6</p>
+                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+            </div>
+        </div>
+        <div id="modal-proyecto7" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal-proyecto7').style.display='none'">&times;</span>
+                <h2>Proyecto 7: [Nombre del Proyecto]</h2>
+                <img src="./assets/galeria/proyecto7.jpg" alt="Proyecto 7" style="width:100%; border-radius:10px;">
+                <p>Descripción detallada del proyecto 7</p>
+                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+            </div>
+        </div>
+        <div id="modal-proyecto8" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal-proyecto8').style.display='none'">&times;</span>
+                <h2>Proyecto 8: [Nombre del Proyecto]</h2>
+                <img src="./assets/galeria/proyecto8.jpg" alt="Proyecto 8" style="width:100%; border-radius:10px;">
+                <p>Descripción detallada del proyecto 8</p>
+                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+            </div>
+        </div>
+
     </main>
 
     <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button" title="Contáctanos por WhatsApp">
@@ -426,9 +527,10 @@
     <div id="modal-proyecto3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('modal-proyecto3').style.display='none'">&times;</span>
-            <h2>Más sobre Proyecto 3</h2>
-            <p>Descripción del proyecto 3.</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Project3.jpg" alt="Proyecto 3" style="width:100%; border-radius:10px;">
+            <h2>Proyecto: Pagana - Arte Digital</h2>
+            <img src="./assets/galeria/pagana.PNG" alt="Pagana" style="width:100%; border-radius:10px;">
+            <p>Exposición digital de arte con enfoque en la fusión entre lo tradicional y lo contemporáneo. Una exploración visual que combina elementos paganos con técnicas modernas de diseño digital.</p>
+            <a href="https://katarsispazos.github.io/pagana/" target="_blank" class="proyecto-link">Visitar Galería</a>
         </div>
     </div>
 
@@ -437,7 +539,7 @@
             <span class="close" onclick="document.getElementById('modal-proyecto4').style.display='none'">&times;</span>
             <h2>Más sobre Proyecto 4</h2>
             <p>Descripción del proyecto 4.</p>
-            <img src="images/proyecto4.png" alt="Proyecto 4" style="width:100%; border-radius:10px;">
+            <img src="./assets/galeria/corpus.PNG" alt="Proyecto 4" style="width:100%; border-radius:10px;">
         </div>
     </div>
 
