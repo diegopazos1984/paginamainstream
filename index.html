@@ -28,29 +28,73 @@
     </header>
 
     <main>
-        <section id="competitivo">
-            <h2>Benchmarking Competitivo</h2>
-            <p>Objetivo: Analizar y comparar productos, servicios o procesos de tus competidores directos.</p>
-            <p>Complejidad: Media. Precio: Moderado a alto.</p>
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <h3>Benchmarking</h3>
+                    <div class="servicios-container">
+                        <div id="competitivo">
+                            <h4>Competitivo</h4>
+                            <p>Análisis detallado de competidores directos</p>
+                            <p>Complejidad: Alta. Precio: Alto.</p>
+                        </div>
+                        <section id="funcional">
+                            <h4>Funcional</h4>
+                            <p>Objetivo: Comparar un proceso específico con empresas líderes.</p>
+                            <p>Complejidad: Alta. Precio: Alto.</p>
+                        </section>
+                        <section id="interno">
+                            <h4>Interno</h4>
+                            <p>Objetivo: Comparar procesos dentro de tu propia organización.</p>
+                            <p>Complejidad: Baja a media. Precio: Bajo.</p>
+                        </section>
+                    </div>
+                </div>
+                
+                <div class="servicio-card">
+                    <h3>Diseño UX/UI</h3>
+                    <p>Soluciones completas de experiencia de usuario</p>
+                    <ul class="servicios-lista">
+                        <li>Investigación de usuarios</li>
+                        <li>Wireframes y prototipos</li>
+                        <li>Testing y optimización</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="funcional">
-            <h2>Benchmarking Funcional</h2>
-            <p>Objetivo: Comparar un proceso específico con empresas líderes.</p>
-            <p>Complejidad: Alta. Precio: Alto.</p>
-        </section>
-
-        <section id="interno">
-            <h2>Benchmarking Interno</h2>
-            <p>Objetivo: Comparar procesos dentro de tu propia organización.</p>
-            <p>Complejidad: Baja a media. Precio: Bajo.</p>
+        <section id="proceso">
+            <h2>Nuestro Proceso</h2>
+            <div class="proceso-timeline">
+                <div class="paso">
+                    <h3>1. Descubrimiento</h3>
+                    <p>Análisis inicial y planificación</p>
+                </div>
+                <div class="paso">
+                    <h3>2. Diseño</h3>
+                    <p>Creación y validación</p>
+                </div>
+                <div class="paso">
+                    <h3>3. Desarrollo</h3>
+                    <p>Implementación y pruebas</p>
+                </div>
+            </div>
         </section>
 
         <section id="diseno-ux-ui">
             <h2>Servicios de UX/UI</h2>
-            <p>Enfoque en la experiencia de usuario (UX) y la interfaz de usuario (UI).</p>
-            <p>Mostramos estudios de caso, metodologías utilizadas y resultados obtenidos para otros clientes.</p>
-            <button class="mas-informacion" onclick="document.getElementById('modal-diseno-ux-ui').style.display='block'">Más Información</button>
+            <p>Proceso completo de diseño centrado en el usuario</p>
+            <div class="valor-triad">
+                <h3>💼 Nuestro Valor como Triad</h3>
+                <ul class="valor-lista">
+                    <li>Trabajo personalizado y colaborativo</li>
+                    <li>Enfoque centrado en el usuario y la conversión</li>
+                    <li>Prototipos navegables listos para desarrollo</li>
+                    <li>Acompañamiento estratégico</li>
+                </ul>
+            </div>
+            <button class="mas-informacion" onclick="document.getElementById('modal-diseno-ux-ui').style.display='block'">Ver Metodología y Precios</button>
         </section>
 
         <section id="diseno-grafico">
@@ -194,40 +238,122 @@
             <h2>Sobre Nosotros</h2>
             <div class="integrantes">
                 <div class="integrante">
+                    <img src="./assets/perfiles/jesu.jpg" alt="Jesus Pérez" class="perfil-foto">
                     <h3>Jesus Pérez</h3>
-                    <button onclick="document.getElementById('modal-juan').style.display='block'">Más Información</button>
+                    <button onclick="document.getElementById('modal-juan').style.display='block'">Diseñador Grafico Diseñador ux_ui</button>
                     <div id="modal-juan" class="modal">
                         <div class="modal-content">
                             <span class="close" onclick="document.getElementById('modal-juan').style.display='none'">&times;</span>
-                            <h2>Juan Pérez</h2>
-                            <p>Juan es un diseñador gráfico con más de 5 años de experiencia en branding y diseño de interfaces.</p>
+                            <h2>Jesus Pérez</h2>
+                            <p>Jesus es un diseñador gráfico con más de 5 años de experiencia en branding y diseño de interfaces.</p>
                         </div>
                     </div>
                 </div>
                 <div class="integrante">
+                    <img src="./assets/perfiles/ariel.jpg" alt="Aiel Valenzuela" class="perfil-foto">
                     <h3>Aiel Valenzuela</h3>
-                    <button onclick="document.getElementById('modal-maria').style.display='block'">Más Información</button>
+                    <button onclick="document.getElementById('modal-maria').style.display='block'">Publicista</button>
                     <div id="modal-maria" class="modal">
                         <div class="modal-content">
                             <span class="close" onclick="document.getElementById('modal-maria').style.display='none'">&times;</span>
                             <h2>Aiel Valenzuela</h2>
-                            <p>María es una desarrolladora web con experiencia en front-end y back-end.</p>
+                            <p>Ariel es una desarrolladora web con experiencia en front-end y back-end.</p>
                         </div>
                     </div>
                 </div>
                 <div class="integrante">
+                    <img src="./assets/perfiles/pazos.jpg" alt="Diego Pazos" class="perfil-foto">
                     <h3>Diego Pazos</h3>
-                    <button onclick="document.getElementById('modal-carlos').style.display='block'">Más Información</button>
+                    <button onclick="document.getElementById('modal-carlos').style.display='block'">Diseñador Full Stack</button>
                     <div id="modal-carlos" class="modal">
                         <div class="modal-content">
                             <span class="close" onclick="document.getElementById('modal-carlos').style.display='none'">&times;</span>
                             <h2>Diego Pazos</h2>
-                            <p>Diego es un especialista en Diseño gráfico digital con un enfoque en Arte e Ia.</p>
+                            <p>Diego Pazos, artista visual y diseñador multidisciplinario con formación en artes, diseño gráfico y UX/UI. Con una mirada estética sólida y un enfoque centrado en las personas, Diego fusiona creatividad y estrategia para dar vida a experiencias digitales funcionales, accesibles y memorables. Desde interfaces limpias hasta visualización 3D con Blender, cada proyecto es una oportunidad para conectar emocionalmente con el usuario y destacar el valor único de cada marca.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="testimonios">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Carolina Mendez" class="perfil-foto">
+                    <h3>Carolina Mendez</h3>
+                    <p class="cargo">CEO - StartupChile</p>
+                    <button onclick="document.getElementById('modal-testimonio1').style.display='block'">Ver Testimonio</button>
+                </div>
+                <div class="testimonio-card">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Roberto Álvarez" class="perfil-foto">
+                    <h3>Roberto Álvarez</h3>
+                    <p class="cargo">Director de Marketing - TechPro</p>
+                    <button onclick="document.getElementById('modal-testimonio2').style.display='block'">Ver Testimonio</button>
+                </div>
+                <div class="testimonio-card">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana María Torres" class="perfil-foto">
+                    <h3>Ana María Torres</h3>
+                    <p class="cargo">Fundadora - DigitalMind</p>
+                    <button onclick="document.getElementById('modal-testimonio3').style.display='block'">Ver Testimonio</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="modal-testimonio1" class="modal">
+            <div class="modal-content testimonio-modal">
+                <span class="close" onclick="document.getElementById('modal-testimonio1').style.display='none'">&times;</span>
+                <div class="testimonio-header">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Carolina Mendez">
+                    <div>
+                        <h2>Carolina Mendez</h2>
+                        <p>CEO - StartupChile</p>
+                    </div>
+                </div>
+                <p class="testimonio-texto">"El equipo de Triad transformó completamente nuestra plataforma. Su enfoque en UX/UI nos ayudó a aumentar la retención de usuarios en un 45%. El proceso fue muy profesional y los resultados superaron nuestras expectativas."</p>
+                <div class="proyecto-detalles">
+                    <img src="images/proyecto-carolina.jpg" alt="Proyecto StartupChile">
+                    <p>Rediseño completo de plataforma | 2023</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-testimonio2" class="modal">
+            <div class="modal-content testimonio-modal">
+                <span class="close" onclick="document.getElementById('modal-testimonio2').style.display='none'">&times;</span>
+                <div class="testimonio-header">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Roberto Álvarez">
+                    <div>
+                        <h2>Roberto Álvarez</h2>
+                        <p>Director de Marketing - TechPro</p>
+                    </div>
+                </div>
+                <p class="testimonio-texto">"Trabajar con Triad fue una experiencia increíble. Su equipo de diseño UX/UI nos ayudó a crear una interfaz intuitiva y atractiva que ha mejorado significativamente la experiencia de nuestros usuarios."</p>
+                <div class="proyecto-detalles">
+                    <img src="images/proyecto-roberto.jpg" alt="Proyecto TechPro">
+                    <p>Optimización de interfaz de usuario | 2023</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-testimonio3" class="modal">
+            <div class="modal-content testimonio-modal">
+                <span class="close" onclick="document.getElementById('modal-testimonio3').style.display='none'">&times;</span>
+                <div class="testimonio-header">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana María Torres">
+                    <div>
+                        <h2>Ana María Torres</h2>
+                        <p>Fundadora - DigitalMind</p>
+                    </div>
+                </div>
+                <p class="testimonio-texto">"El rediseño de nuestra identidad corporativa por parte de Triad ha sido un éxito rotundo. Su creatividad y profesionalismo son incomparables. ¡Recomendados al 100%!"</p>
+                <div class="proyecto-detalles">
+                    <img src="images/proyecto-ana.jpg" alt="Proyecto DigitalMind">
+                    <p>Rediseño de identidad corporativa | 2023</p>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button" title="Contáctanos por WhatsApp">
@@ -238,17 +364,33 @@
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('modal-diseno-grafico').style.display='none'">&times;</span>
             <h2>Más sobre Diseño Gráfico</h2>
-            <p>Aquí puedes incluir información adicional sobre los servicios de diseño gráfico.</p>
+            <p>En Triad ofrecemos soluciones de diseño gráfico que comunican con claridad, estilo y propósito. Creamos identidades visuales coherentes, piezas editoriales impactantes y gráficos publicitarios que conectan con tu audiencia en todos los formatos. Desde logotipos, paletas cromáticas y sistemas de marca hasta afiches, flyers, packaging y contenido para redes sociales, nuestro enfoque combina estética, funcionalidad y estrategia para potenciar la presencia visual de tu proyecto o empresa.</p>
             <img src="images/diseno_grafico.png" alt="Diseño Gráfico" style="width:100%; border-radius:10px;">
         </div>
     </div>
 
     <div id="modal-diseno-ux-ui" class="modal">
-        <div class="modal-content">
+        <div class="modal-content proceso-ux">
             <span class="close" onclick="document.getElementById('modal-diseno-ux-ui').style.display='none'">&times;</span>
-            <h2>Más sobre UX/UI</h2>
-            <p>Aquí puedes incluir información adicional sobre los servicios de UX/UI.</p>
-            <img src="images/ux_ui.png" alt="UX/UI" style="width:100%; border-radius:10px;">
+            <h2>Proceso de Diseño UX/UI</h2>
+            <div class="etapas-ux">
+                <div class="etapa">
+                    <h3>🔍 1. Descubrimiento</h3>
+                    <p class="duracion">⏱ 1 semana | 💰 $150.000 CLP</p>
+                    <ul>
+                        <li>Kick-off meeting con stakeholders</li>
+                        <li>Definición de objetivos</li>
+                        <li>Análisis de competencia</li>
+                        <li>Brief de proyecto</li>
+                    </ul>
+                </div>
+                <!-- Añadir el resto de las etapas de manera similar -->
+            </div>
+            <div class="presupuesto-total">
+                <h3>Inversión Total Estimada</h3>
+                <p class="precio">💰 $1.300.000 CLP</p>
+                <p class="tiempo">⏱ 4-6 semanas</p>
+            </div>
         </div>
     </div>
 
@@ -256,7 +398,9 @@
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('modal-marketing').style.display='none'">&times;</span>
             <h2>Más sobre Marketing</h2>
-            <p>Aquí puedes incluir información adicional sobre las estrategias de marketing.</p>
+            <p>En Triad potenciamos tu marca a través de estrategias de marketing digital diseñadas para alcanzar objetivos reales. Ofrecemos gestión de redes sociales, creación de campañas publicitarias (Meta Ads y Google Ads), email marketing, redacción de contenido optimizado (SEO), y análisis de métricas para una toma de decisiones efectiva. Nuestro enfoque combina creatividad, análisis de datos y consistencia visual para que tu mensaje llegue a las personas correctas en el momento justo.
+
+            </p>
             <img src="images/marketing.png" alt="Marketing" style="width:100%; border-radius:10px;">
         </div>
     </div>
