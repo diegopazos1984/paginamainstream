@@ -9,13 +9,31 @@
 </head>
 <body>
     <header>
+        <div class="animated-banner">
+            <div class="geometric-shapes">
+                <div class="circle"></div>
+                <div class="square"></div>
+                <div class="triangle"></div>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="banner-content">
+                <h2>Diseño que Transforma</h2>
+                <p>Convertimos ideas en experiencias memorables</p>
+                <button class="cta-button" onclick="triggerAnimation()">
+                    Comienza tu Proyecto
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+        </div>
         <h1>Diseño Gráfico, Diseño UX/UI</h1>
         <img src="assets/logotriad.png" alt="Logo Triad" class="logo-header">
         <nav>
             <ul>
-                <li><a href="#competitivo">Benchmarking Competitivo</a></li>
-                <li><a href="#funcional">Benchmarking Funcional</a></li>
-                <li><a href="#interno">Benchmarking Interno</a></li>
+                <li><a href="#benchmarking">Benchmarking</a></li>
                 <li><a href="#diseno-ux-ui">Servicios de UX/UI</a></li>
                 <li><a href="#diseno-grafico">Diseño Gráfico</a></li>
                 <li><a href="#marketing">Estrategias de Marketing</a></li>
@@ -32,23 +50,25 @@
             <h2>Nuestros Servicios</h2>
             <div class="servicios-grid">
                 <div class="servicio-card">
-                    <h3>Benchmarking</h3>
+                    <h3 id="benchmarking">Benchmarking</h3>
                     <div class="servicios-container">
-                        <div id="competitivo">
-                            <h4>Competitivo</h4>
-                            <p>Análisis detallado de competidores directos</p>
-                            <p>Complejidad: Alta. Precio: Alto.</p>
+                        <div class="benchmark-tipos">
+                            <div class="tipo">
+                                <h4>Competitivo</h4>
+                                <p>Análisis detallado de competidores directos</p>
+                                <p>Complejidad: Alta. Precio: Alto.</p>
+                            </div>
+                            <div class="tipo">
+                                <h4>Funcional</h4>
+                                <p>Objetivo: Comparar un proceso específico con empresas líderes.</p>
+                                <p>Complejidad: Alta. Precio: Alto.</p>
+                            </div>
+                            <div class="tipo">
+                                <h4>Interno</h4>
+                                <p>Objetivo: Comparar procesos dentro de tu propia organización.</p>
+                                <p>Complejidad: Baja a media. Precio: Bajo.</p>
+                            </div>
                         </div>
-                        <section id="funcional">
-                            <h4>Funcional</h4>
-                            <p>Objetivo: Comparar un proceso específico con empresas líderes.</p>
-                            <p>Complejidad: Alta. Precio: Alto.</p>
-                        </section>
-                        <section id="interno">
-                            <h4>Interno</h4>
-                            <p>Objetivo: Comparar procesos dentro de tu propia organización.</p>
-                            <p>Complejidad: Baja a media. Precio: Bajo.</p>
-                        </section>
                     </div>
                 </div>
                 
@@ -114,14 +134,20 @@
             <h2>Galería de Proyectos</h2>
             <div class="galeria-mosaico">
                 <div class="galeria-item proyecto-especial">
-                    <img src="./assets/galeria/proyecto1.jpg" alt="Proyecto 1">
-                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
-                    <button onclick="document.getElementById('modal-proyecto1').style.display='block'">Más Información</button>
+                    <img src="./assets/galeria/indivisual.PNG" alt="Indivisual">
+                    <div class="proyecto-info">
+                        <h3>Indivisual - Diseño Web</h3>
+                        <button onclick="window.open('https://indivisual.cl/', '_blank')">Ver Proyecto</button>
+                        <button onclick="document.getElementById('modal-proyecto1').style.display='block'">Más Información</button>
+                    </div>
                 </div>
                 <div class="galeria-item proyecto-especial">
-                    <img src="./assets/galeria/proyecto2.jpg" alt="Proyecto 2">
-                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
-                    <button onclick="document.getElementById('modal-proyecto2').style.display='block'">Más Información</button>
+                    <img src="./assets/galeria/uikit.PNG" alt="UI Kit Design">
+                    <div class="proyecto-info">
+                        <h3>UI Kit Design System</h3>
+                        <button onclick="window.open('https://diegopazos1984.github.io/uikitpagana/', '_blank')">Ver Proyecto</button>
+                        <button onclick="document.getElementById('modal-proyecto2').style.display='block'">Más Información</button>
+                    </div>
                 </div>
                 <div class="galeria-item proyecto-especial">
                     <img src="./assets/galeria/pagana.PNG" alt="Proyecto 3">
@@ -140,9 +166,12 @@
                     </div>
                 </div>
                 <div class="galeria-item proyecto-especial">
-                    <img src="./assets/galeria/proyecto5.jpg" alt="Proyecto 5">
-                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
-                    <button onclick="document.getElementById('modal-proyecto5').style.display='block'">Más Información</button>
+                    <img src="./assets/galeria/port.PNG" alt="Portfolio Personal">
+                    <div class="proyecto-info">
+                        <h3>Portfolio Creativo</h3>
+                        <button onclick="window.open('https://katarsispazos.github.io/pazos/', '_blank')">Ver Proyecto</button>
+                        <button onclick="document.getElementById('modal-proyecto5').style.display='block'">Más Información</button>
+                    </div>
                 </div>
                 <div class="galeria-item proyecto-especial">
                     <img src="./assets/galeria/proyecto6.jpg" alt="Proyecto 6">
@@ -172,10 +201,17 @@
 
         <section id="video">
             <h2>Video de Presentación</h2>
-            <video controls style="width: 100%; height: auto;">
-                <source src="video/presentacion.mp4" type="video/mp4">
-                Tu navegador no soporta el video.
-            </video>
+            <div class="video-container">
+                <iframe 
+                    width="100%" 
+                    height="515" 
+                    src="https://www.youtube.com/embed/aclwZ4PV6rc" 
+                    title="Video de Presentación" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </section>
 
         <section id="carrusel">
@@ -385,19 +421,19 @@
         <div id="modal-proyecto1" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="document.getElementById('modal-proyecto1').style.display='none'">&times;</span>
-                <h2>Proyecto 1: [Nombre del Proyecto]</h2>
-                <img src="./assets/galeria/proyecto1.jpg" alt="Proyecto 1" style="width:100%; border-radius:10px;">
-                <p>Descripción detallada del proyecto 1</p>
-                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+                <h2>Proyecto: Indivisual - Diseño Web</h2>
+                <img src="./assets/galeria/indivisual.PNG" alt="Indivisual" style="width:100%; border-radius:10px;">
+                <p>Sitio web corporativo con enfoque en servicios de diseño y desarrollo web. Destaca por su diseño limpio, navegación intuitiva y experiencia de usuario optimizada. Implementado con las últimas tecnologías web para garantizar rendimiento y accesibilidad.</p>
+                <a href="https://indivisual.cl/" target="_blank" class="proyecto-link">Visitar Sitio Web</a>
             </div>
         </div>
         <div id="modal-proyecto2" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="document.getElementById('modal-proyecto2').style.display='none'">&times;</span>
-                <h2>Proyecto 2: [Nombre del Proyecto]</h2>
-                <img src="./assets/galeria/proyecto2.jpg" alt="Proyecto 2" style="width:100%; border-radius:10px;">
-                <p>Descripción detallada del proyecto 2</p>
-                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+                <h2>Proyecto: UI Kit Design System</h2>
+                <img src="./assets/galeria/uikit.PNG" alt="UI Kit Design" style="width:100%; border-radius:10px;">
+                <p>Sistema de diseño UI Kit que establece los fundamentos visuales y componentes reutilizables para crear interfaces coherentes y escalables. Incluye documentación detallada y ejemplos prácticos de implementación.</p>
+                <a href="https://diegopazos1984.github.io/uikitpagana/" target="_blank" class="proyecto-link">Visitar Proyecto</a>
             </div>
         </div>
         <div id="modal-proyecto3" class="modal">
@@ -421,10 +457,10 @@
         <div id="modal-proyecto5" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="document.getElementById('modal-proyecto5').style.display='none'">&times;</span>
-                <h2>Proyecto 5: [Nombre del Proyecto]</h2>
-                <img src="./assets/galeria/proyecto5.jpg" alt="Proyecto 5" style="width:100%; border-radius:10px;">
-                <p>Descripción detallada del proyecto 5</p>
-                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+                <h2>Portfolio Personal Creativo</h2>
+                <img src="./assets/galeria/port.PNG" alt="Portfolio Personal" style="width:100%; border-radius:10px;">
+                <p>Portfolio personal que destaca trabajos creativos y proyectos de diseño. Desarrollado con un enfoque minimalista y moderno, presenta una galería interactiva de proyectos y experiencias profesionales.</p>
+                <a href="https://katarsispazos.github.io/pazos/" target="_blank" class="proyecto-link">Visitar Portfolio</a>
             </div>
         </div>
         <div id="modal-proyecto6" class="modal">
@@ -452,6 +488,15 @@
                 <img src="./assets/galeria/proyecto8.jpg" alt="Proyecto 8" style="width:100%; border-radius:10px;">
                 <p>Descripción detallada del proyecto 8</p>
                 <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
+            </div>
+        </div>
+        <div id="modal-ui-kit" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal-ui-kit').style.display='none'">&times;</span>
+                <h2>Proyecto: UI Kit Design System</h2>
+                <img src="./assets/galeria/uikit.PNG" alt="UI Kit Design" style="width:100%; border-radius:10px;">
+                <p>Sistema de diseño UI Kit que establece los fundamentos visuales y componentes reutilizables para crear interfaces coherentes y escalables. Incluye documentación detallada y ejemplos prácticos de implementación.</p>
+                <a href="https://diegopazos1984.github.io/uikitpagana/" target="_blank" class="proyecto-link">Visitar Proyecto</a>
             </div>
         </div>
 
@@ -518,9 +563,10 @@
     <div id="modal-proyecto2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('modal-proyecto2').style.display='none'">&times;</span>
-            <h2>Más sobre Proyecto 2</h2>
-            <p>Descripción del proyecto 2.</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Project2.jpg" alt="Proyecto 2" style="width:100%; border-radius:10px;">
+            <h2>Proyecto: UI Kit Design System</h2>
+            <img src="./assets/galeria/uikit.PNG" alt="UI Kit Design" style="width:100%; border-radius:10px;">
+            <p>Sistema de diseño UI Kit que establece los fundamentos visuales y componentes reutilizables para crear interfaces coherentes y escalables. Incluye documentación detallada y ejemplos prácticos de implementación.</p>
+            <a href="https://diegopazos1984.github.io/uikitpagana/" target="_blank" class="proyecto-link">Visitar Proyecto</a>
         </div>
     </div>
 
@@ -546,9 +592,10 @@
     <div id="modal-proyecto5" class="modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('modal-proyecto5').style.display='none'">&times;</span>
-            <h2>Más sobre Proyecto 5</h2>
-            <p>Descripción del proyecto 5.</p>
-            <img src="images/proyecto5.png" alt="Proyecto 5" style="width:100%; border-radius:10px;">
+            <h2>Portfolio Personal Creativo</h2>
+            <img src="./assets/galeria/pazos.PNG" alt="Portfolio Personal" style="width:100%; border-radius:10px;">
+            <p>Portfolio personal que destaca trabajos creativos y proyectos de diseño. Desarrollado con un enfoque minimalista y moderno, presenta una galería interactiva de proyectos y experiencias profesionales.</p>
+            <a href="https://katarsispazos.github.io/pazos/" target="_blank" class="proyecto-link">Visitar Portfolio</a>
         </div>
     </div>
 
@@ -648,7 +695,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Empresa Emergente</p>
+        <p style="color: white;">&copy; 2025 Empresa Emergente</p>
         <div class="social-icons">
             <a href="https://www.facebook.com" target="_blank">
                 <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="30">
