@@ -66,3 +66,82 @@ window.addEventListener('scroll', () => {
         banner.classList.add('active');
     }
 });
+
+function openTab(evt, tabName) {
+    const tabContents = document.getElementsByClassName('tab-content');
+    const tabBtns = document.getElementsByClassName('tab-btn');
+    
+    Array.from(tabContents).forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    Array.from(tabBtns).forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    document.getElementById(tabName).classList.add('active');
+    evt.currentTarget.classList.add('active');
+}
+
+function showProcesoDetails(index) {
+    const details = document.querySelectorAll('.proceso-details');
+    const currentDetail = document.getElementById(`proceso-details-${index}`);
+    
+    details.forEach(detail => {
+        detail.classList.remove('active');
+    });
+    
+    currentDetail.classList.add('active');
+}
+
+// Animación al hacer scroll para proceso-cards
+document.addEventListener('scroll', () => {
+    const cards = document.querySelectorAll('.proceso-card');
+    cards.forEach((card, index) => {
+        if (isElementInViewport(card)) {
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 200);
+        }
+    });
+});
+
+function toggleMenu() {
+    const menu = document.querySelector('.nav-menu');
+    menu.classList.toggle('active');
+}
+
+// Smooth scroll para los enlaces de navegación
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+        
+        // Cerrar menú móvil si está abierto
+        document.querySelector('.nav-menu').classList.remove('active');
+    });
+});
+
+// Resaltar enlace activo al hacer scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        const scroll = window.pageYOffset;
+        
+        if (scroll >= sectionTop && scroll < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + section.id) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+});
