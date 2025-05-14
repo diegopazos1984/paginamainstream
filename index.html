@@ -29,92 +29,201 @@
                 </button>
             </div>
         </div>
-        <h1>Diseño Gráfico, Diseño UX/UI</h1>
-        <img src="assets/logotriad.png" alt="Logo Triad" class="logo-header">
-        <nav>
-            <ul>
-                <li><a href="#benchmarking">Benchmarking</a></li>
-                <li><a href="#diseno-ux-ui">Servicios de UX/UI</a></li>
-                <li><a href="#diseno-grafico">Diseño Gráfico</a></li>
-                <li><a href="#marketing">Estrategias de Marketing</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#video">Video de Presentación</a></li>
-                <li><a href="#carrusel">Carrusel de Imágenes Isométricas</a></li>
-                <li><a href="#contacto">Contáctanos</a></li>
-            </ul>
-        </nav>
+        <div class="header-main">
+            <div class="logo-container">
+                <img src="assets/logotriad.png" alt="Logo Triad" class="logo-header">
+                <h1>Triad<span>Design</span></h1>
+            </div>
+            <nav>
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#servicios" class="nav-link">
+                        <i class="fas fa-star"></i>
+                        <span>Servicios</span>
+                    </a></li>
+                    <li><a href="#proceso" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Proceso</span>
+                    </a></li>
+                    <li><a href="#galeria" class="nav-link">
+                        <i class="fas fa-images"></i>
+                        <span>Portafolio</span>
+                    </a></li>
+                    <li><a href="#planes-ux-ui" class="nav-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Planes</span>
+                    </a></li>
+                    <li><a href="#contacto" class="nav-link highlight">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contáctanos</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section id="servicios">
-            <h2>Nuestros Servicios</h2>
+            <h2 class="animate-on-scroll">Nuestros Servicios</h2>
             <div class="servicios-grid">
-                <div class="servicio-card">
+                <div class="servicio-card animate-fade-in">
+                    <div class="servicio-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <h3 id="benchmarking">Benchmarking</h3>
-                    <div class="servicios-container">
-                        <div class="benchmark-tipos">
-                            <div class="tipo">
-                                <h4>Competitivo</h4>
-                                <p>Análisis detallado de competidores directos</p>
-                                <p>Complejidad: Alta. Precio: Alto.</p>
-                            </div>
-                            <div class="tipo">
-                                <h4>Funcional</h4>
-                                <p>Objetivo: Comparar un proceso específico con empresas líderes.</p>
-                                <p>Complejidad: Alta. Precio: Alto.</p>
-                            </div>
-                            <div class="tipo">
-                                <h4>Interno</h4>
-                                <p>Objetivo: Comparar procesos dentro de tu propia organización.</p>
-                                <p>Complejidad: Baja a media. Precio: Bajo.</p>
-                            </div>
-                        </div>
+                    <p>Análisis comparativo estratégico para optimizar tu presencia digital.</p>
+                    <div class="servicio-buttons">
+                        <button class="servicio-btn primary" onclick="document.getElementById('modal-bench').style.display='block'">
+                            <i class="fas fa-info-circle"></i> Más Información
+                        </button>
+                        <button class="servicio-btn secondary" onclick="location.href='#contacto'">
+                            <i class="fas fa-paper-plane"></i> Consultar
+                        </button>
                     </div>
                 </div>
                 
-                <div class="servicio-card">
+                <div class="servicio-card animate-slide-in">
+                    <div class="servicio-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
                     <h3>Diseño UX/UI</h3>
                     <p>Soluciones completas de experiencia de usuario</p>
-                    <ul class="servicios-lista">
-                        <li>Investigación de usuarios</li>
-                        <li>Wireframes y prototipos</li>
-                        <li>Testing y optimización</li>
+                    <div class="servicio-buttons">
+                        <button class="servicio-btn primary" onclick="document.getElementById('modal-uxui').style.display='block'">
+                            <i class="fas fa-info-circle"></i> Ver Detalles
+                        </button>
+                        <button class="servicio-btn secondary" onclick="location.href='#planes-ux-ui'">
+                            <i class="fas fa-tags"></i> Ver Planes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modales de Servicios -->
+        <div id="modal-bench" class="modal">
+            <div class="modal-content servicio-modal">
+                <span class="close" onclick="document.getElementById('modal-bench').style.display='none'">&times;</span>
+                <div class="modal-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>Benchmarking Estratégico</h2>
+                </div>
+                <div class="modal-body">
+                    <h3>¿Qué incluye?</h3>
+                    <ul class="servicio-features">
+                        <li><i class="fas fa-check"></i> Análisis competitivo detallado</li>
+                        <li><i class="fas fa-check"></i> Identificación de mejores prácticas</li>
+                        <li><i class="fas fa-check"></i> Reporte estratégico personalizado</li>
+                        <li><i class="fas fa-check"></i> Recomendaciones accionables</li>
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div id="modal-uxui" class="modal">
+            <div class="modal-content servicio-modal">
+                <span class="close" onclick="document.getElementById('modal-uxui').style.display='none'">&times;</span>
+                <div class="modal-header">
+                    <i class="fas fa-desktop"></i>
+                    <h2>Diseño UX/UI</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="servicio-tabs">
+                        <button class="tab-btn active" onclick="openTab(event, 'ux-tab')">UX Research</button>
+                        <button class="tab-btn" onclick="openTab(event, 'ui-tab')">UI Design</button>
+                    </div>
+                    <div id="ux-tab" class="tab-content active">
+                        <ul class="servicio-features">
+                            <li><i class="fas fa-check"></i> Investigación de usuarios</li>
+                            <li><i class="fas fa-check"></i> Mapas de experiencia</li>
+                            <li><i class="fas fa-check"></i> Testing de usabilidad</li>
+                        </ul>
+                    </div>
+                    <div id="ui-tab" class="tab-content">
+                        <ul class="servicio-features">
+                            <li><i class="fas fa-check"></i> Diseño visual</li>
+                            <li><i class="fas fa-check"></i> Sistemas de diseño</li>
+                            <li><i class="fas fa-check"></i> Prototipado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section id="proceso">
-            <h2>Nuestro Proceso</h2>
-            <div class="proceso-timeline">
-                <div class="paso">
-                    <h3>1. Descubrimiento</h3>
-                    <p>Análisis inicial y planificación</p>
+            <h2 class="section-title">Nuestro Proceso</h2>
+            <div class="proceso-grid">
+                <div class="proceso-card" data-step="1">
+                    <div class="proceso-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Descubrimiento</h3>
+                    <p>Análisis inicial y planificación estratégica</p>
+                    <div class="proceso-buttons">
+                        <button class="proceso-btn primary" onclick="showProcesoDetails(0)">
+                            <i class="fas fa-info-circle"></i> Detalles
+                        </button>
+                        <button class="proceso-btn secondary" onclick="location.href='#contacto'">
+                            <i class="fas fa-rocket"></i> Comenzar
+                        </button>
+                    </div>
+                    <div class="proceso-details" id="proceso-details-0">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Investigación de mercado</li>
+                            <li><i class="fas fa-check"></i> Análisis de competencia</li>
+                            <li><i class="fas fa-check"></i> Definición de objetivos</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="paso">
-                    <h3>2. Diseño</h3>
-                    <p>Creación y validación</p>
-                </div>
-                <div class="paso">
-                    <h3>3. Desarrollo</h3>
-                    <p>Implementación y pruebas</p>
-                </div>
-            </div>
-        </section>
 
-        <section id="diseno-ux-ui">
-            <h2>Servicios de UX/UI</h2>
-            <p>Proceso completo de diseño centrado en el usuario</p>
-            <div class="valor-triad">
-                <h3>💼 Nuestro Valor como Triad</h3>
-                <ul class="valor-lista">
-                    <li>Trabajo personalizado y colaborativo</li>
-                    <li>Enfoque centrado en el usuario y la conversión</li>
-                    <li>Prototipos navegables listos para desarrollo</li>
-                    <li>Acompañamiento estratégico</li>
-                </ul>
+                <div class="proceso-card" data-step="2">
+                    <div class="proceso-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Diseño</h3>
+                    <p>Creación y validación de soluciones</p>
+                    <div class="proceso-buttons">
+                        <button class="proceso-btn primary" onclick="showProcesoDetails(1)">
+                            <i class="fas fa-info-circle"></i> Detalles
+                        </button>
+                        <button class="proceso-btn secondary" onclick="location.href='#planes-ux-ui'">
+                            <i class="fas fa-paint-brush"></i> Ver Planes
+                        </button>
+                    </div>
+                    <div class="proceso-details" id="proceso-details-1">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Wireframes y prototipos</li>
+                            <li><i class="fas fa-check"></i> Diseño visual</li>
+                            <li><i class="fas fa-check"></i> Revisiones con cliente</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="proceso-card" data-step="3">
+                    <div class="proceso-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desarrollo</h3>
+                    <p>Implementación y optimización</p>
+                    <div class="proceso-buttons">
+                        <button class="proceso-btn primary" onclick="showProcesoDetails(2)">
+                            <i class="fas fa-info-circle"></i> Detalles
+                        </button>
+                        <button class="proceso-btn secondary" onclick="document.getElementById('modal-desarrollo').style.display='block'">
+                            <i class="fas fa-cog"></i> Tecnologías
+                        </button>
+                    </div>
+                    <div class="proceso-details" id="proceso-details-2">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Desarrollo frontend/backend</li>
+                            <li><i class="fas fa-check"></i> Testing y optimización</li>
+                            <li><i class="fas fa-check"></i> Lanzamiento</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <button class="mas-informacion" onclick="document.getElementById('modal-diseno-ux-ui').style.display='block'">Ver Metodología y Precios</button>
         </section>
 
         <section id="diseno-grafico">
@@ -172,21 +281,6 @@
                         <button onclick="window.open('https://katarsispazos.github.io/pazos/', '_blank')">Ver Proyecto</button>
                         <button onclick="document.getElementById('modal-proyecto5').style.display='block'">Más Información</button>
                     </div>
-                </div>
-                <div class="galeria-item proyecto-especial">
-                    <img src="./assets/galeria/proyecto6.jpg" alt="Proyecto 6">
-                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
-                    <button onclick="document.getElementById('modal-proyecto6').style.display='block'">Más Información</button>
-                </div>
-                <div class="galeria-item proyecto-especial">
-                    <img src="./assets/galeria/proyecto7.jpg" alt="Proyecto 7">
-                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
-                    <button onclick="document.getElementById('modal-proyecto7').style.display='block'">Más Información</button>
-                </div>
-                <div class="galeria-item proyecto-especial">
-                    <img src="./assets/galeria/proyecto8.jpg" alt="Proyecto 8">
-                    <button onclick="window.open('#', '_blank')">Ver Proyecto</button>
-                    <button onclick="document.getElementById('modal-proyecto8').style.display='block'">Más Información</button>
                 </div>
                 <div class="galeria-item proyecto-especial">
                     <img src="./assets/galeria/Captura.PNG" alt="Diagrama de Flujo">
@@ -463,47 +557,12 @@
                 <a href="https://katarsispazos.github.io/pazos/" target="_blank" class="proyecto-link">Visitar Portfolio</a>
             </div>
         </div>
-        <div id="modal-proyecto6" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="document.getElementById('modal-proyecto6').style.display='none'">&times;</span>
-                <h2>Proyecto 6: [Nombre del Proyecto]</h2>
-                <img src="./assets/galeria/proyecto6.jpg" alt="Proyecto 6" style="width:100%; border-radius:10px;">
-                <p>Descripción detallada del proyecto 6</p>
-                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
-            </div>
-        </div>
-        <div id="modal-proyecto7" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="document.getElementById('modal-proyecto7').style.display='none'">&times;</span>
-                <h2>Proyecto 7: [Nombre del Proyecto]</h2>
-                <img src="./assets/galeria/proyecto7.jpg" alt="Proyecto 7" style="width:100%; border-radius:10px;">
-                <p>Descripción detallada del proyecto 7</p>
-                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
-            </div>
-        </div>
-        <div id="modal-proyecto8" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="document.getElementById('modal-proyecto8').style.display='none'">&times;</span>
-                <h2>Proyecto 8: [Nombre del Proyecto]</h2>
-                <img src="./assets/galeria/proyecto8.jpg" alt="Proyecto 8" style="width:100%; border-radius:10px;">
-                <p>Descripción detallada del proyecto 8</p>
-                <a href="#" target="_blank" class="proyecto-link">Visitar Proyecto</a>
-            </div>
-        </div>
-        <div id="modal-ui-kit" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="document.getElementById('modal-ui-kit').style.display='none'">&times;</span>
-                <h2>Proyecto: UI Kit Design System</h2>
-                <img src="./assets/galeria/uikit.PNG" alt="UI Kit Design" style="width:100%; border-radius:10px;">
-                <p>Sistema de diseño UI Kit que establece los fundamentos visuales y componentes reutilizables para crear interfaces coherentes y escalables. Incluye documentación detallada y ejemplos prácticos de implementación.</p>
-                <a href="https://diegopazos1984.github.io/uikitpagana/" target="_blank" class="proyecto-link">Visitar Proyecto</a>
-            </div>
-        </div>
 
     </main>
 
-    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button" title="Contáctanos por WhatsApp">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    <a href="tg://resolve?domain=DiegoPazos&phone=+56932036012" target="_blank" class="floating-button telegram" title="Contáctanos por Telegram">
+        <i class="fab fa-telegram-plane"></i>
+        <span class="tooltip">¡Escríbenos directamente!</span>
     </a>
 
     <div id="modal-diseno-grafico" class="modal">
@@ -596,42 +655,6 @@
             <img src="./assets/galeria/pazos.PNG" alt="Portfolio Personal" style="width:100%; border-radius:10px;">
             <p>Portfolio personal que destaca trabajos creativos y proyectos de diseño. Desarrollado con un enfoque minimalista y moderno, presenta una galería interactiva de proyectos y experiencias profesionales.</p>
             <a href="https://katarsispazos.github.io/pazos/" target="_blank" class="proyecto-link">Visitar Portfolio</a>
-        </div>
-    </div>
-
-    <div id="modal-proyecto6" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="document.getElementById('modal-proyecto6').style.display='none'">&times;</span>
-            <h2>Más sobre Proyecto 6</h2>
-            <p>Descripción del proyecto 6.</p>
-            <img src="images/proyecto6.png" alt="Proyecto 6" style="width:100%; border-radius:10px;">
-        </div>
-    </div>
-
-    <div id="modal-proyecto7" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="document.getElementById('modal-proyecto7').style.display='none'">&times;</span>
-            <h2>Más sobre Proyecto 7</h2>
-            <p>Descripción del proyecto 7.</p>
-            <img src="images/proyecto7.png" alt="Proyecto 7" style="width:100%; border-radius:10px;">
-        </div>
-    </div>
-
-    <div id="modal-proyecto8" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="document.getElementById('modal-proyecto8').style.display='none'">&times;</span>
-            <h2>Más sobre Proyecto 8</h2>
-            <p>Descripción del proyecto 8.</p>
-            <img src="images/proyecto8.png" alt="Proyecto 8" style="width:100%; border-radius:10px;">
-        </div>
-    </div>
-
-    <div id="modal-proyecto9" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="document.getElementById('modal-proyecto9').style.display='none'">&times;</span>
-            <h2>Más sobre Proyecto 9</h2>
-            <p>Descripción del proyecto 9.</p>
-            <img src="images/proyecto9.png" alt="Proyecto 9" style="width:100%; border-radius:10px;">
         </div>
     </div>
 
