@@ -322,31 +322,61 @@
 
         <section id="planes-ux-ui">
             <h2>Planes de UX/UI</h2>
-            <div class="planes-container" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-                <div class="plan" style="text-align: center; margin: 10px;">
-                    <h3>Plan Básico</h3>
-                    <p>Comienza tu camino digital con soluciones accesibles y esenciales. Perfecto para quienes están dando su primer paso.</p>
-                    <button onclick="document.getElementById('modal-plan-basico').style.display='block'">Ver Detalles</button>
-                    <button class="add-to-cart" onclick="addToCart('Plan Básico', 100)">Agregar al Carrito</button>
+            <div class="planes-container">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Plan Básico</h3>
+                        <div class="precio">$699.990</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Diseño de 3 páginas</li>
+                        <li><i class="fas fa-check"></i> UX Research básico</li>
+                        <li><i class="fas fa-check"></i> Prototipo simple</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Testing con usuarios</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Sistema de diseño</li>
+                    </ul>
+                    <a href="#contact-modal" class="plan-btn" onclick="document.getElementById('contact-modal').style.display='block'">
+                        <span>Empezar Ahora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="plan" style="text-align: center; margin: 10px;">
-                    <h3>Plan Avanzado</h3>
-                    <p>Eleva tu presencia digital con estrategias de UX/UI personalizadas y optimización continua. Ideal para marcas en crecimiento.</p>
-                    <button onclick="document.getElementById('modal-plan-avanzado').style.display='block'">Ver Detalles</button>
-                    <button class="add-to-cart" onclick="addToCart('Plan Avanzado', 200)">Agregar al Carrito</button>
+
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Plan Pro</h3>
+                        <div class="precio">$1.299.990</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Diseño de 5 páginas</li>
+                        <li><i class="fas fa-check"></i> UX Research limitado</li>
+                        <li><i class="fas fa-check"></i> Prototipo básico</li>
+                        <li><i class="fas fa-check"></i> Testing básico</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Sin soporte premium</li>
+                    </ul>
+                    <a href="#contact-modal" class="plan-btn" onclick="document.getElementById('contact-modal').style.display='block'">
+                        <span>Seleccionar Plan</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="plan" style="text-align: center; margin: 10px;">
-                    <h3>Plan Premium</h3>
-                    <p>Obtén soluciones completas para un crecimiento sostenido. Diseño avanzado y soporte continuo para maximizar el rendimiento de tu marca.</p>
-                    <button onclick="document.getElementById('modal-plan-premium').style.display='block'">Ver Detalles</button>
-                    <button class="add-to-cart" onclick="addToCart('Plan Premium', 300)">Agregar al Carrito</button>
+
+                <div class="plan-card featured">
+                    <div class="plan-tag">Recomendado</div>
+                    <div class="plan-header">
+                        <h3>Plan Enterprise</h3>
+                        <div class="precio">$2.499.990</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Diseño ilimitado de páginas</li>
+                        <li><i class="fas fa-check"></i> UX Research avanzado</li>
+                        <li><i class="fas fa-check"></i> Prototipo avanzado</li>
+                        <li><i class="fas fa-check"></i> Testing completo</li>
+                        <li><i class="fas fa-check"></i> Soporte premium 24/7</li>
+                    </ul>
+                    <a href="#contact-modal" class="plan-btn primary" onclick="document.getElementById('contact-modal').style.display='block'">
+                        <span>¡Comenzar Proyecto!</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
                 </div>
-            </div>
-            <div id="cart" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px;">
-                <h3>Carrito de Compras</h3>
-                <ul id="cart-items"></ul>
-                <p>Total: $<span id="cart-total">0</span></p>
-                <button onclick="checkout()">Finalizar Compra</button>
             </div>
         </section>
 
